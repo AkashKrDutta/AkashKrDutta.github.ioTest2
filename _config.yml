@@ -1,0 +1,58 @@
+title: Akash Kumar Dutta
+description: Akash's blog...
+
+url: 
+baseurl: ""
+paginate_path: "blog/page:num/"
+permalink: blog/:title/
+excerpt_separator: <!--more-->
+
+markdown: kramdown
+highlighter: rouge
+gems: [jekyll-paginate]
+paginate: 5
+
+
+urlimg: /images/
+
+navigation:
+ - title: Home
+   url: /index.html
+ - title: About
+   url: /about
+ - title: Tags
+   url: /tags
+ - title: Contact
+   url: /contact
+ - title: CV
+   url: /cv
+
+
+social:
+   github: AkashKrDutta
+   twitter: Akdboltzmann
+   facebook: akash.boltzmann
+   email: akdboltzmann@gmail.com
+
+google_analytics: "UA-58263416-1"
+
+
+owner:
+  name:           Akash Kumar Dutta
+  avatar:         foo.png
+  email:          akashdut@iitk.ac.in
+  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
+  description:
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        Akdboltzmann
+  facebook:	  akash.boltzmann      
+  github:         AkashKrDutta
+  stackexchange:  
+  linkedin:       akash-kumar-dutta
+  instagram:      
+  flickr:
+  tumblr:  
+  google_plus:    https://plus.google.com/u/0/106237575876703786081
+
+
+disqus_shortname: Akash
