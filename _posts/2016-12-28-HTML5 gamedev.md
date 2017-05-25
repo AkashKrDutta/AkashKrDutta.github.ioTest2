@@ -43,8 +43,8 @@ This creates a color filled red rectangle in the canvas at (10,20) coordinates o
 
 **GAME COMPONENTS AND THEIR MOVEMENT** 
 <br>
-The importance of these objects is that they can be moved inside the canvas by redrawing them to different positions, this being done every fixed time interval (frame rate) ! A separate function is created which helps in drawing the components by taking the position as arguments. This calls a function (callMe as in the code shown) is called at fixed intervals to make the game component move. The function callMe then removes the previous drawin canvas object and redraws it, creating an effect of movement. The position can be incremented each time adding a constant or a uniformly increasing mathematical function to make the component move uniformly or accelerate respectively. <br>
-The movement is triggered also by adding event handlers through javascript, like “keydown” , “keyup” for keyboard keys, which can be recognised using the keyCode attribute of the event argument of event -handler function call.
+The importance of these objects is that they can be moved inside the canvas by redrawing them to different positions, this being done every fixed time interval (frame rate). The <code>addEventListener</code> captures the input and calls a function (callMe as in the code shown) at fixed intervals to make the game component move. The function callMe then calls another function that takes the current position as arguments and redraws it according to the key pressed, this being done at fixed interval of time, creating an effect of movement. The position can be incremented each time adding a constant or a uniformly increasing mathematical function to make the component move uniformly or accelerate respectively. <br>
+The movement is triggered by adding event handlers through javascript, like “keydown” , “keyup” for keyboard keys, which can be recognised using the keyCode attribute of the event argument of event -handler function call.
 <br>
 _Reference Code in js-_ <br>
 {% highlight javascript linenos %}
