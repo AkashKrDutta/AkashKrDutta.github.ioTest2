@@ -1,6 +1,8 @@
 title: Akash Kumar Dutta
 description: Akash's blog...
 
+
+home : /index.html
 url: 
 baseurl: ""
 paginate_path: "blog/page:num/"
