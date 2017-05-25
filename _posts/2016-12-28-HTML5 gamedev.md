@@ -30,7 +30,7 @@ Without much ado, we talk about the canvas object in the html 5 that offers to u
 We can draw rectangles, circles, lines using the 2D context of canvas object ( in layman's term - drawing in the canvas holder by using its 2 Dimensional object ).We can provide colors to fill , or use gradient colors , or even load images to make animations in the 2d context of canvas object.
 <br>
 _Reference Code in js-_ <br>
-{% highlight js %}
+{% highlight js linenos %}
 var canvas=Document.createElement(“canvas”);  
 document.appendChild(canvas);  
 var context=canvas.getContext(“2D”);  
