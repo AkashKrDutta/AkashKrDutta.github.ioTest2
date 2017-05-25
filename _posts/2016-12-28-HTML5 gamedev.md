@@ -49,11 +49,11 @@ The movement is triggered by adding event handlers through javascript, like “k
 _Reference Code in js-_ <br>
 {% highlight javascript linenos %}
 window.addEventListener('keydown', function (e) {  
-        myGameArea.key = e.keyCode;    
-//for calling a function callMe at 50 every milliseconds ( or  
+        myGameArea.key = e.keyCode;
+        })
+//for calling a function callMe at 50 every milliseconds ( or   
 //better say 20 frames per second)  
-setInterval(callMe,50); 
-})
+setInterval(callMe,50);
 {% endhighlight %}
 <br>
 Hence by knowing which key is pressed we can call the required functions for action to be taken. <br>
