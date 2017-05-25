@@ -7,11 +7,17 @@ title: Home
   <h1 class="pageTitle">Recent Posts</h1>
   <ul class="posts noList">
     {% for post in paginator.posts %}
-      <li>
+	<div style="display:block" onmouseover="this.style.background='#EAECEE';" onmouseout="this.style.background='white';">
+	<div style="margin:2%">
+	<a style="text-decoration:none" class="post-link" href="{{ post.url | prepend: site.baseurl }}">	 
+	<li>
         <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
-        <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-        <p class="description">{% if post.description %}{{ post.description | strip_html | strip_newlines | truncate: 250 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 250 }}{% endif %}</p>
-      </li>
+        <h3>{{ post.title }}</h3>
+        <p style="color:#000" class="description">{% if post.description %}{{ post.description | strip_html | strip_newlines | truncate: 250 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 250 }}{% endif %}</p>
+	 </li>	     
+	</a>
+	</div>
+	</div>
     {% endfor %}
   </ul>
   <!-- Pagination links -->
