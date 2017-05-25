@@ -30,7 +30,7 @@ Without much ado, we talk about the canvas object in the html 5 that offers to u
 We can draw rectangles, circles, lines using the 2D context of canvas object ( in layman's term - drawing in the canvas holder by using its 2 Dimensional object ).We can provide colors to fill , or use gradient colors , or even load images to make animations in the 2d context of canvas object.
 <br>
 _Reference Code in js-_ <br>
-{% highlight js linenos %}
+{% highlight js %}
 var canvas=Document.createElement(“canvas”);  
 document.appendChild(canvas);  
 var context=canvas.getContext(“2D”);  
@@ -47,7 +47,7 @@ The importance of these objects is that they can be moved inside the canvas by r
 The movement is triggered by adding event handlers through javascript, like “keydown” , “keyup” for keyboard keys, which can be recognised using the keyCode attribute of the event argument of event -handler function call.
 <br>
 _Reference Code in js-_ <br>
-{% highlight javascript linenos %}
+{% highlight javascript %}
 window.addEventListener('keydown', function (e) {  
         myGameArea.key = e.keyCode;
         //for calling a function callMe at 50 every milliseconds ( or   
