@@ -43,25 +43,26 @@ This creates a color filled red rectangle in the canvas at (10,20) coordinates o
 
 **GAME COMPONENTS AND THEIR MOVEMENT** 
 <br>
-The importance of these objects is that they can be moved inside the canvas by redrawing them to different positions , this being done per frame ! A separate function is created which helps in drawing the components taking the position as arguments that is called many times a second to update the position of the game components.The position can incremented each time adding a constant or a uniformly increasing function to make the component move uniformly or accelerate respectively. <br>
-The movement is triggered also by adding event handlers through javascript, like “keydown” , “keyup” for keyboard keys, which then can be recognised using the keyCode attribute of the event argument of event -handler function call (see attached reference code) .
+The importance of these objects is that they can be moved inside the canvas by redrawing them to different positions, this being done every fixed time interval (frame rate) ! A separate function is created which helps in drawing the components by taking the position as arguments. This calls a function (callMe as in the code shown) is called at fixed intervals to make the game component move. The function callMe then removes the previous drawin canvas object and redraws it, creating an effect of movement. The position can be incremented each time adding a constant or a uniformly increasing mathematical function to make the component move uniformly or accelerate respectively. <br>
+The movement is triggered also by adding event handlers through javascript, like “keydown” , “keyup” for keyboard keys, which can be recognised using the keyCode attribute of the event argument of event -handler function call.
 <br>
 _Reference Code in js-_ <br>
 {% highlight javascript linenos %}
 window.addEventListener('keydown', function (e) {  
-        myGameArea.key = e.keyCode;  
-        })  
+        myGameArea.key = e.keyCode;    
 //for calling a function callMe at 50 every milliseconds ( or  
 //better say 20 frames per second)  
-//setInterval(callMe,50); 
+setInterval(callMe,50); 
+})
 {% endhighlight %}
+<br>
 Hence by knowing which key is pressed we can call the required functions for action to be taken. <br>
 
 **GAME OBSTACLES AND SCORE** 
 <br>
 Like other game components game obstacles are also game components but being generated at random coordinates of random shape, the code of which is much the same and i leave it to you :) .  
-The score in most of the cases is decided by certain collision events or by the current frame from the beginning of the game.
-Its very easy to ascertain the collision between objects exploiting the again the boundary coordinates, and the current frame can be known by ensuring a  counter that is incremented for the function that is called per frame.I leave the job for you to google out the way to write text in canvas element to display the score when needed. <br>
+The score in most of the cases is decided by certain collision events or by the count of the current frame from the beginning of the game.
+Its very easy to ascertain the collision between objects exploiting the boundary coordinates. The current frame can be known by ensuring a  counter that is incremented for the function that is called per frame. I leave the job for you to google out the way to write text in canvas element to display the score when needed. <br>
 
 **ALMOST THERE !**
 <br>
@@ -69,7 +70,7 @@ We  have known  everything to create our first simple html5 game with our own ga
 
 **LONELY WITHOUT SOUNDS ?**
 <br>
-Well everyone loves the charm when there’s music in the air ! Luckily we can have it too in case of html5 “audio” object . Not going into much detail , we can add sound using the following sample code link, which i leave you to dissect. <br>
+Well everyone loves the charm when there’s music in the air ! Luckily we can have it too in case of html5 “audio” object . Not going into much detail, we can add sound using the following code link, which I leave you to dissect. <br>
 
 **LINKS AND FURTHER READING**
 <br>
